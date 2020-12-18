@@ -10,4 +10,9 @@
   background-color: lightgray;
   border: 1px solid grey;
   border-radius: 2px;
+  
+}
+
+.search button:hover{
+  background-color: blue;
 }

@@ -1,10 +1,16 @@
 main{
   display: flex;
   justify-content: space-between;
+  height: 100%
 }
 
 #shelf{
   width: 20vw;
+  
   border-left: 2px darkgray solid;
   background-color: lightgrey;
+}
+
+#shelf button:hover{
+  background-color: blue;
 }
