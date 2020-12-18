@@ -1,0 +1,13 @@
+.search{
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.search button{
+  margin-left: 25px;
+  background-color: lightgray;
+  border: 1px solid grey;
+  border-radius: 2px;
+}

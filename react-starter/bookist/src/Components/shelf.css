@@ -1,0 +1,10 @@
+main{
+  display: flex;
+  justify-content: space-between;
+}
+
+#shelf{
+  width: 20vw;
+  border-left: 2px darkgray solid;
+  background-color: lightgrey;
+}

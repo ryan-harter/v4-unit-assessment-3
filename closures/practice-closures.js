@@ -7,12 +7,19 @@
     Call the function getSecretString and have it return the myStr variable. 
     myFunc should return getSecretString
   */
-  
+  function myFunc(){
+    let myStr = 'super secret string'
+    function getSecretString(){
+      return myStr
+    }
+    return getSecretString
+  }
   //CODE HERE
 
   
   //Now create a variable called secretString. Its value should be the invocation of myFunc.
 
+  let secretString = myFunc()
   //CODE HERE
   
   
@@ -28,26 +35,42 @@
     The lightSwitch function should return flipTheSwitch.
   */
   
+
+  function lightSwitch(){
+    let isTheLightOn = false
+    function flipTheSwitch(){
+      if(isTheLightOn){
+        isTheLightOn = false
+        return 'The light is off'
+      }else{
+        isTheLightOn = true
+        return 'The light is on'
+      }
+    }
+    return flipTheSwitch
+  }
+
   //CODE HERE
 
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
-  
+  let kitchenSwitch = lightSwitch()
   //CODE HERE
 
   
   //Invoke kitchenSwitch.
-
+  kitchenSwitch()
   //CODE HERE
   
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
-
+  let bathroomSwitch = lightSwitch()
   //CODE HERE
   
   
   //Invoke bathroomSwitch twice.
-  
+  lightSwitch()
+  lightSwitch()
   //CODE HERE
 
   
@@ -63,6 +86,24 @@
       - 'prunePlant' should subtract 1 from the height and return the new height
   */
 
+  function plantTracker(){
+    let plant = 'fern'
+    let height = 12
+    return{
+      readInfo: function(){
+        return `This is a ${plant} plant that is ${height} inches tall.`
+      },
+      waterPlant: function(){
+        height += 1
+        return height
+      },
+      prunePlant: function(){
+        height -= 1
+        return height
+      }
+
+    }
+  }
   //CODE HERE
 
 
@@ -77,20 +118,36 @@
       - 'deleteFromProducts' should receive one argument, a string, and delete it from the products array
         - hint: try to find the index of the string first
   */
+  function inventory(){
+    let products = []
+    return{
+      readProducts: function(){
+        return products
+      },
+      addToProducts: function(product){
+        products = [...products, product]
+        return products
+      },
+      deleteFromProducts: function(product){
+        let index = products.indexOf(product)
+        products.splice(index, 1)
+      }
 
+    }
+  }
   //CODE HERE
 
 
   /*
     Create a variable called 'shoes' whose value is the invocation of inventory.
   */
-
+  let shoes = inventory()
   //CODE HERE
 
 
   /*
     Add an item to your shoes array using the addToProducts function
   */
-
+  shoes.addToProducts('Nike')
   //CODE HERE
 
