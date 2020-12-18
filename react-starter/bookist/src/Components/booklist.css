@@ -19,7 +19,7 @@
   background-color: lightgrey;
 }
 
-/* #book-list:after{
-  content: '';
-  flex-grow: 40;
-} */
+#book-list{
+  
+  flex-grow: 50;
+}
